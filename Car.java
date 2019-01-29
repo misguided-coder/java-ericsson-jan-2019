@@ -7,12 +7,20 @@ class Car {
 	String color;
 	int speed;
 
-
+	//default constructor
 	Car() {
-
+		System.out.println("Inside Car() constructor!!!!");
+		this.vin = 1000;
+		this.doors = 2;
+		this.wheels = 4;
+		this.price = 560000.00;
+		this.color = "Black";
+		this.speed = 160;
 	}	
 
+	//parameterized constructor
 	Car(int vin,int doors,int wheels,double price,String color,int speed) {
+		System.out.println("Inside Car(int vin,int doors,int wheels,double price,String color,int speed) constructor!!!!");
 		this.vin = vin;
 		this.doors = doors;
 		this.wheels = wheels;
@@ -34,8 +42,8 @@ class Car {
 		System.out.println("Car is speeding up at the speed of "+this.speed+" km per hour!!!!");
 	}		
 
-	void brake() {
-		this.speed = this.speed - 10;
+	void brake(int appliedSpeed) {
+		this.speed = this.speed - appliedSpeed;
 		System.out.println("Car is slowing down to the speed of "+this.speed+" km per hour!!!!");
 	}		
 }
